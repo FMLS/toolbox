@@ -40,7 +40,7 @@ func Consume(ctx *cli.Context) error {
 
 	q, err := rmq.Chan.QueueDeclare(
 		ctx.String("queue"), // name
-		false,               // durable
+		true,                // durable
 		false,               // delete when unused
 		false,               // exclusive
 		false,               // no-wait
